@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Main_QR">
+        <div class="QR_Logo"><img src="scanner.png" alt="QR"></div>
+        <div class="QR_Heading">
+            <h1>QR Code Generator</h1>
+        </div>
+        <p>create a beautiful QR code instantly</p>
+        <div class="input_box">
+            <label for="qrType">Select QR Type</label>
+            <div class="type-container">
+                <button class="type-btn active" data-type="website">
+                    🌐 <span>Website</span>
+                </button>
+                <button class="type-btn" data-type="text">
+                    📝 <span>Text</span>
+                </button>
+                <button class="type-btn" data-type="email">
+                    📧 <span>Email</span>
+                </button>
+                <button class="type-btn" data-type="phone">
+                    📱 <span>Phone</span>
+                </button>
+
+                <button class="type-btn" data-type="wifi">
+                    📶 <span>WiFi</span>
+                </button>
+
+                <button class="type-btn" data-type="location">
+                    📍 <span>Location</span>
+                </button>
+            </div>
+            <div class="dynamicForm">
+                <label for="qrType">Website Content</label><br>
+                <input type="url" name="website-Content" id="qrInput">
+            </div>
+            <div>
+                <button class="generate-btn">
+                    Generate QR Code
+                </button>
+            </div>
+        </div>
+        <div class="preview">
+            <h3>QR Preview</h3>
+            <div id="qrcode"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
